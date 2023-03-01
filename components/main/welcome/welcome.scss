@@ -1,0 +1,163 @@
+@import "../../utils/variables.scss", "../../utils/mixins.scss";
+
+.welcome {
+  position: relative;
+  background-color: $accent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+  &__text-box {
+    position: relative;
+    z-index: 5;
+    width: 308px;
+    margin: 192px 0 193px 21.1vw;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 3.43rem;
+    line-height: 1.17;
+    margin: 0;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.43;
+    margin: 42px 0;
+  }
+  &__button {
+    @include transparentBtn(white, white);
+    padding: 0.72em 3.34em;
+  }
+  &__img-box {
+    position: absolute;
+    z-index: 0;
+    top: -117px;
+    right: 17.5vw;
+    width: 859px;
+    height: 859px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__main-img {
+    position: absolute;
+    width: 584px;
+    height: 584px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+  }
+  &__bg-circle {
+    position: absolute;
+    z-index: 1;
+    width: 677px;
+    height: 677px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media (max-width: 1600px) {
+  .welcome {
+    &__text-box {
+      margin-left: 10vw;
+    }
+    &__img-box {
+      right: 1vw;
+    }
+  }
+}
+
+@media (max-width: 1131px) {
+  .welcome {
+    &__text-box {
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
+
+    &__img-box {
+      top: -70px;
+      right: -10vw;
+      width: 584px;
+      height: 584px;
+    }
+    &__main-img {
+      width: 400px;
+      height: 400px;
+    }
+    &__bg-circle {
+      width: 463px;
+      height: 463px;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .welcome {
+    &__text-box {
+      max-width: 250px;
+    }
+    &__title {
+      font-size: 2.43rem;
+    }
+    &__subtitle {
+      margin: 30px 0;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .welcome {
+    &__text-box {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    &__img-box {
+      top: 10px;
+      right: 2vw;
+      width: 300px;
+      height: 300px;
+    }
+    &__main-img {
+      width: 200px;
+      height: 200px;
+    }
+    &__bg-circle {
+      width: 232px;
+      height: 232px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .welcome {
+    &__text-box {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      margin-left: 5vw;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__subtitle {
+      margin: 20px 0;
+    }
+    &__img-box {
+      top: -10px;
+      right: -5vw;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .welcome {
+    &__img-box {
+      display: none;
+    }
+  }
+}

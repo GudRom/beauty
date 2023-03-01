@@ -1,0 +1,174 @@
+@import "../utils/variables.scss", "../utils/mixins.scss";
+
+.header {
+  &__navigation {
+    background-color: $lightgray;
+    padding: 16px 0;
+  }
+  &__list {
+    display: flex;
+    @include clearListStyle();
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__list-item {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__nav-link {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.14;
+    color: $dark;
+    transition: all 0.5s;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transition: all 0.2s;
+    }
+    &:active {
+      color: $accent;
+    }
+  }
+  &__main {
+    margin: auto;
+  }
+  &__top-part {
+    max-width: 1110px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__call-box {
+    display: flex;
+    align-items: center;
+  }
+  &__logo-link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.5s;
+    &:hover {
+      filter: drop-shadow(1px 1px 1px $accent);
+      transition: all 0.2s;
+    }
+  }
+  &__button {
+    @include transparentBtn(black, $accent);
+  }
+  &__logo {
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 20px;
+  }
+  &__logo-text {
+    font-weight: 700;
+    font-size: 2.57rem;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    margin: 0;
+    color: $accent;
+  }
+  &__line {
+    border-top: 1px solid $lightgray;
+    width: 100%;
+  }
+  &__product-navigation {
+    margin: 30px 0;
+  }
+  &__page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include clearListStyle();
+  }
+  &__page-list-item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    transition: all 0.5s;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+      transition: all 0.2s;
+    }
+    &:active {
+      color: $accent;
+    }
+
+    &_tel {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media (max-width: 1131px) {
+  .header {
+    &__top-part {
+      margin: 20px;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .header {
+    &__top-part {
+      margin: 10px 20px;
+    }
+
+    &__product-navigation {
+      margin: 15px 0;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .header {
+    &__call-box {
+      flex-direction: column-reverse;
+    }
+    &__page-list {
+      gap: 20px;
+    }
+    &__page-list-item {
+      margin-right: 0;
+    }
+
+    &__link_tel {
+      margin-right: 0;
+      margin-top: 10px;
+    }
+    &__logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    &__logo-text {
+      font-size: 1.57rem;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+    &__top-part {
+      flex-direction: column;
+    }
+  }
+}

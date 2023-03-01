@@ -1,0 +1,76 @@
+@import "../../../utils/variables.scss", "../../../utils/mixins.scss";
+
+.card {
+  width: 540px;
+  height: 212px;
+  background: $accent;
+  padding: 35px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  &__form {
+    color: white;
+    width: 250px;
+  }
+  &__form-btn {
+    @include btnWithImg("../../../../images/service/mail.svg");
+    height: 107px;
+    width: 140px;
+    margin-top: 18px;
+    &:hover {
+      filter: drop-shadow(1px 1px 1px $dark);
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  &__text-box {
+    color: white;
+    max-width: 170px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 1.29rem;
+    line-height: 1.17;
+    margin: 0;
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.43;
+    margin: 25px 0;
+  }
+  &__input {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    width: 225px;
+    height: 35px;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 9px 25px;
+    border: none;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.14;
+      color: #c4c4c4;
+    }
+  }
+  &__button {
+    @include transparentBtn(white, white);
+    padding: 0.54em 1.9em;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 300px;
+    padding: 20px 10px;
+    &__form-btn {
+      height: 20px;
+      width: 30px;
+      margin-top: 120px;
+    }
+  }
+}
